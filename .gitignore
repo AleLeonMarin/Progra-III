@@ -1,0 +1,8 @@
+#Binaries
+*.aux
+*.toc
+*.out
+*.log
+*.synctex.gz
+*.fdb_latexmk
+*.fls
