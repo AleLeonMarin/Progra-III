@@ -1,3 +1,279 @@
 \begin{center}
-    \section{Java versions} 
+	\section{Java versions}
+	\subsection{Java 8}
+	Las caracteristicas de Java 8 son:
+	\begin{itemize}
+		\item \textbf{Métodos default en interfaces: }Ahora las interfaces pueden tener métodos con implementación por defecto,
+		      permitiendo que las clases que implementan la interfaz no necesiten definir esos métodos.
+
+		\item \textbf{Interfaces funcionales y lambdas: }Las interfaces funcionales permiten definir funciones
+		      que pueden ser instanciadas por lambdas. Se introduce la anotación @FunctionalInterface
+		      para marcar una interfaz como funcional.
+
+		\item \textbf{Expresiones Lambda: }Simplifican la declaración de funciones y reducen la verbosidad al
+		      definir comportamientos de métodos abstractos de las interfaces funcionales.
+
+		\item  \textbf{Predicate<T>:} Implementa una condición lógica que evalúa un objeto de tipo T
+		      devolviendo un booleano.
+
+		\item \textbf{Stream API:} Introduce una nueva forma de trabajar con flujos de datos a través
+		      de colecciones, permitiendo realizar operaciones funcionales como filter(), map(), collect() y forEach().
+
+		\item \textbf{java.time:} Un nuevo paquete que introduce clases para manejar fechas
+		      y tiempos de manera más eficiente, como LocalDate, LocalTime, Instant, y ZonedDateTime.
+
+	\end{itemize}
+
+	\subsection{Java 9 - 11}
+	\subsubsection{Java 9}
+	\begin{itemize}
+		\item  \textbf{Modularidad (Proyecto Jigsaw): }Introduce la modularización del JDK,
+		      permitiendo una mejor encapsulación, menor superficie de ataque, dependencias explícitas
+		      y optimización de recursos. Mejora la organización de los paquetes en módulos que permiten
+		      definir dependencias entre ellos.
+
+		\item  \textbf{Mejoras en colecciones: }Nuevos métodos factoría para crear colecciones de
+		      manera más eficiente.
+
+		\item  \textbf{Mejoras en la clase Optional: }Métodos como or(), ifPresentOrElse(), y
+		      stream() mejoran su manejo.
+
+		\item  \textbf{Streams: }Nuevos métodos como dropWhile() y takeWhile(), además de
+		      ofNullable() y mejoras en iterate().
+
+		\item  \textbf{jlink: }Permite generar runtimes mínimos solo con los módulos necesarios,
+		      útil en contenedores y entornos cloud.
+
+		\item  \textbf{Recolector de basura G1: }Ahora es el recolector por defecto, optimizado
+		      para reducir la latencia.
+
+		\item  \textbf{Jar multiversión: }Soporte para archivos jar que contienen diferentes
+		      versiones de clases para distintas versiones de Java.
+
+	\end{itemize}
+	\subsubsection{Java 10}
+	Inferencia de tipos: Introducción de la palabra clave var
+	para la inferencia de tipos en variables locales, simplificando la creación de objetos.
+	\subsubsection{Java 11}
+	Versión LTS: Proporciona soporte extendido hasta 2023 (o 2026 en forma extendida).
+	Se destacan mejoras incrementales como el soporte para funciones avanzadas de seguridad
+	y mejoras en el rendimiento.
+
+	\subsection{Java 12 - 17}
+	\subsubsection{Java 12}
+	\begin{itemize}
+		\item \textbf{Expresiones switch: }Introducción de manera experimental.
+		      Permite utilizar switch como expresión, mejorando la legibilidad del código.
+
+		\item \textbf{Formato de número compacto: }Permite formatear números en un formato más compacto.
+		      Ejemplo: 1000 se convierte en 1K.
+
+	\end{itemize}
+	\subsubsection{Java 13}
+	\begin{itemize}
+		\item \textbf{Bloques de texto: }Introducción de bloques de texto que permiten escribir
+		      múltiples líneas sin necesidad de concatenar strings o usar caracteres de escape.
+		\item \textbf{Expresiones switch mejoradas: }Se mejora aún más la funcionalidad
+		      introducida en Java 12.
+	\end{itemize}
+
+	\subsubsection{Java 14}
+	\begin{itemize}
+		\item \textbf{Records (en vista previa):} Nuevo tipo de clase que reduce la verbosidad al declarar
+		      clases que solo actúan como contenedores de datos inmutables.
+
+		\item \textbf{Pattern Matching para instanceof:} Simplifica el uso del operador instanceof,
+		      eliminando la necesidad de realizar casting explícito.
+
+		\item \textbf{Excepciones NullPointerException mejoradas:} Mejora la precisión de las trazas,
+		      indicando exactamente qué variable es null.
+
+	\end{itemize}
+	\subsubsection{Java 15}
+	\begin{itemize}
+		\item \textbf{Cambios internos y preliminares:} Muchos de los cambios en Java 15 son internos,
+		      con algunas características en vista previa o eliminadas.
+
+		\item \textbf{Sealed Classes (vista previa):} Clases selladas que permiten restringir qué otras
+		      clases pueden heredar de ellas.
+
+	\end{itemize}
+
+	\subsubsection{Java 16}
+	\begin{itemize}
+		\item \textbf{Records: }Finalmente implementados de forma definitiva. Los records permiten
+		      declarar clases que actúan como simples contenedores de datos.
+
+		\item \textbf{Pattern Matching para instanceof:} Finalización de esta característica
+		      que permite evitar casting explícito.
+
+		\item \textbf{Herramienta de empaquetado (jpackage):} Permite empaquetar aplicaciones Java en
+		      instaladores nativos para diferentes plataformas (Windows, macOS, Linux).
+
+	\end{itemize}
+
+	\subsubsection{Java 17}
+	\begin{itemize}
+		\item \textbf{Versión LTS:} Java 17 es una versión de soporte a largo plazo (LTS)
+		      que sucedió a Java 11. Ofrece soporte hasta 2026, con un soporte extendido hasta 2029.
+
+		\item \textbf{Encapsulación fuerte del JDK:} Se encapsulan firmemente las clases internas del JDK,
+		      mejorando la seguridad y el mantenimiento.
+
+		\item \textbf{Clases sealed:} Implementación definitiva de las clases selladas,
+		      que limitan qué clases pueden extender una clase sellada.
+
+	\end{itemize}
+
+	\subsection{Java 18 - 21}
+	\subsubsection{Java 18}
+	\begin{itemize}
+		\item \textbf{UTF-8 por defecto:} Ahora la codificación de caracteres por defecto
+		      en la plataforma es UTF-8.
+
+		\item \textbf{Servidor web simple:} Se introduce una utilidad en la línea de comandos
+		      para levantar un servidor web básico.
+
+		\item \textbf{Javadoc mejorado:} Permite incluir fragmentos de código en los comentarios
+		      de la documentación.
+
+	\end{itemize}
+
+	\subsubsection{Java 19}
+	\begin{itemize}
+		\item \textbf{Virtual Threads (Vista previa):} Introduce threads virtuales que permiten aumentar
+		      drásticamente el número de hilos manejados por las aplicaciones.
+
+		\item \textbf{Pattern Matching para switch:} Mejora el uso de switch para trabajar con patrones.
+
+		\item \textbf{API de funciones y memoria externas:} Mejor integración con código nativo.
+
+	\end{itemize}
+
+	\subsubsection{Java 20}
+	No introduce novedades en el lenguaje, pero incluye mejoras en seguridad, rendimiento y correcciones.
+	\subsubsection{Java 21}
+	\begin{itemize}
+		\item \textbf{Virtual Threads:} Finalmente lanzados, permiten trabajar con millones de hilos de
+		      manera eficiente.
+
+		\item \textbf{Sequenced Collections:} Introduce nuevas colecciones con un comportamiento más consistente.
+
+		\item \textbf{Pattern Matching mejorado:} Extiende las capacidades del pattern matching,
+		      facilitando la implementación de lógica más robusta y concisa.
+
+	\end{itemize}
+
+	\subsection{Metodos Streams}
+
+	\subsubsection{filter()}
+	Este método devuelve un nuevo stream compuesto únicamente por los elementos que cumplen
+	una condición determinada. Utiliza un Predicate para evaluar cada elemento del stream.
+	\begin{lstlisting}{language=Java}
+        public Long getNumVuelosDia(Fecha f) {
+            return vuelos.stream()
+        .filter(x -> x.getFecha().equals(f))
+        .count();
+        }  
+    \end{lstlisting}
+
+	\subsubsection{allMatch()}
+	Este método devuelve true si todos los elementos del stream cumplen una condición determinada.
+	\begin{lstlisting}{language=Java}
+        public Boolean todosCompletos(Fecha f) {
+        return vuelos.stream()
+        .filter(x -> x.getFecha().equals(f))
+        .allMatch(x -> x.getNumPasajeros().equals(x.getNumPlazas()));
+    }
+\end{lstlisting}
+
+	\subsubsection{anyMatch()}
+	Este método devuelve true si al menos uno de los elementos del stream cumple una condición determinada.
+	\begin{lstlisting}{language=Java}
+        public Boolean hayVueloDestinoFecha(Fecha f, String d) {
+        return vuelos.stream()
+        .anyMatch(x -> x.getFecha().equals(f) && x.getDestino().equals(d));
+        }
+    \end{lstlisting}
+
+	\subsubsection{min()}
+	Devuelve el elemento mínimo de un stream basado en un Comparator.
+	\begin{lstlisting}{language=Java}
+        public Vuelo getVueloMasBaratoDestino(String d) {
+            return vuelos.stream()
+              .filter(x -> x.getDestino().equals(d))
+              .min(Comparator.comparing(Vuelo::getPrecio))
+              .get();
+          }
+          
+    \end{lstlisting}
+
+    \subsubsection{max()}
+    Devuelve el elemento máximo de un stream basado en un Comparator.
+    \begin{lstlisting}{language=Java}
+public Vuelo getVueloMayorOcupacion(Fecha f) {
+return vuelos.stream()
+.filter(x -> x.getFecha().equals(f))
+.max(Comparator.comparingDouble
+(x -> x.getNumPasajeros() / x.getNumPlazas()))
+.get();
+}
+\end{lstlisting}
+
+\subsubsection{map()}
+Este método transforma los elementos del stream a otro tipo mediante una función.
+\begin{lstlisting}{language=Java}
+    public Double getMayorOcupacion(Fecha f) {
+  return vuelos.stream()
+    .filter(x -> x.getFecha().equals(f))
+    .mapToDouble(x -> x.getNumPasajeros() / x.getNumPlazas())
+    .max()
+    .getAsDouble();
+}
+\end{lstlisting}
+
+\subsubsection{reduce()}
+Combina los elementos del stream en un solo valor utilizando una operación de acumulación.
+\begin{lstlisting}{language=Java}
+    public Duracion getDuracionVuelosFecha(Fecha f) {
+  return vuelos.stream()
+    .filter(x -> x.getFecha().equals(f))
+    .map(Vuelo::getDuracion)
+    .reduce(new DuracionImpl(0, 0), Duracion::suma);
+}
+\end{lstlisting}
+
+\subsubsection{forEach()}
+Este método aplica una acción a cada elemento del stream.
+\begin{lstlisting}{language=Java}
+    public void incrementaPrecios10pAPartirFecha(Fecha f) {
+        vuelos.stream()
+          .filter(x -> x.getFecha().compareTo(f) > 0)
+          .forEach(x -> x.setPrecio(x.getPrecio() * 1.1));
+      }
+      
+\end{lstlisting}
+
+\subsubsection{sorted()}
+Ordena los elementos del stream utilizando un Comparator.
+\begin{lstlisting}{language=Java}
+    public void escribeVuelosOrdenadosFechaDuracion(String fileName) {
+        Util.escribeFichero(vuelos.stream()
+          .sorted(Comparator.comparing(Vuelo::getFecha)
+          .thenComparing(Vuelo::getDuracion)), fileName);
+      }
+\end{lstlisting}
+
+\subsubsection{collect()}
+Este método transforma el stream en una colección o en otro tipo de estructura.
+\begin{lstlisting}{language=Java}
+    public List<Duracion> getDuracionesDestino(String d) {
+  return vuelos.stream()
+    .filter(x -> x.getDestino().equals(d))
+    .map(Vuelo::getDuracion)
+    .collect(Collectors.toList());
+}
+\end{lstlisting}
+
+
 \end{center}

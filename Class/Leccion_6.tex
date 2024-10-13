@@ -1,3 +1,53 @@
 \begin{center}
     \section{ Bases de datos }
+
+    Un sistema de bases de datos es una colección de datos interrelacionados 
+    y un conjunto de programas que permiten a los usuarios acceder y modificar 
+    estos datos. Su propósito es ofrecer una visión abstracta de los datos, 
+    ocultando los detalles de cómo se almacenan.
+
+    \subsection{Modelos de bases de datos}
+    Los modelos de datos describen la estructura de las bases de datos, sus relaciones,
+    y restricciones de consistencia en los niveles físico, lógico y de vistas.
+
+    \subsection{Base de datos relacional}
+    Se basan en tablas para representar datos y relaciones entre ellos. 
+    El lenguaje SQL se utiliza comúnmente para manipular estas bases de datos.
+
+    \subsection{Restricciones de Integridad}
+
+    Las restricciones de integridad aseguran que las modificaciones a la base de datos 
+    no comprometan su consistencia. Esto incluye la integridad referencial, que garantiza que 
+    las claves externas se correspondan con valores válidos en otras tablas.
+
+    \subsection{SQL}
+    SQL permite definir, manipular y consultar bases de datos. Las principales operaciones incluyen 
+    la creación de tablas, la inserción de datos, la consulta y la actualización de registros.
+
+    \subsection{Normalización}
+    La normalización es un proceso para estructurar las bases de datos, eliminando redundancias y 
+    asegurando la consistencia de los datos. Se utilizan formas normales para guiar este proceso, 
+    ayudando a organizar los datos de manera eficiente.
+
+    \subsubsection{Reglas de normalización}
+
+        \begin{itemize}
+            \item \textbf{Primera forma normal (1FN):} Elimina la repetición de datos. Cada valor en una 
+            columna debe ser atómico, es decir, no debe contener múltiples valores. 
+            Ejemplo: en lugar de repetir los datos de un cliente en cada venta, 
+            se crea una tabla separada de clientes, referenciada por una clave.
+            \item \textbf{Segunda forma normal (2FN):} Asegura que todas las columnas de una tabla dependan 
+            únicamente de la clave primaria. Si algunas columnas no dependen de la clave principal, 
+            deben separarse en nuevas tablas. Ejemplo: crear una tabla separada para detalles repetidos, 
+            como fechas de ventas o productos vendidos.
+            \item \textbf{Tercera forma normal (3FN):} Elimina dependencias transitivas, donde una columna no clave 
+            depende de otra columna no clave. Ejemplo: los detalles del proveedor de un producto deben estar 
+            en una tabla separada si no dependen de la clave principal de la tabla de ventas.
+        \end{itemize}
+
+        La normalización mejora el diseño de las bases de datos al reducir la redundancia y 
+        mejorar la consistencia de los datos, haciendo que las bases sean más fáciles de mantener 
+        y ampliar.
+
+
 \end{center}

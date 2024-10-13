@@ -1,3 +1,77 @@
 \begin{center}
-    \section{Arquitectura de aplicaciones}
+    \section{Arquitectura de Software}
+
+    La arquitectura de software se refiere al proceso de definir los componentes, 
+    relaciones y comportamientos que satisfacen los requisitos operacionales y técnicos de un sistema.
+    El objetivo es cumplir con criterios como seguridad, eficiencia, disponibilidad y usabilidad.
+
+    \subsection{Fundamentos de la arquitectura de software}
+    Se abordan aspectos críticos que pueden afectar el éxito o fracaso del software, como el entorno 
+    de despliegue, la producción y el uso del sistema por parte de los usuarios.
+    Se destaca la importancia de considerar los intereses de todos los agentes involucrados: los usuarios, 
+    el propio sistema y los objetivos del negocio.
+    La arquitectura debe ser flexible para soportar cambios futuros tanto en software como hardware, 
+    y debe minimizar los riesgos asociados a su construcción.
+
+    \subsection{Capacidades de la Arquitectura de Software}
+    La arquitectura de software debe ser capaz de:
+    \begin{itemize}
+        \item Mostrar la estructura del software sin detallar la implementación.
+        \item Abordar los casos de uso, los requisitos funcionales y de calidad.
+        \item Permitir el cambio de software o hardware sin afectar la estructura del sistema.
+    \end{itemize}
+
+    \subsection{Modelos de Arquitectura de Software}
+
+        \subsubsection{Arquitectura en Capas (N-Capas)}
+            \begin{itemize}
+                \item Organiza la funcionalidad en capas, con roles claramente definidos. 
+                Cada capa puede residir en una misma máquina o distribuirse en varias.
+                \item \textbf{Beneficios:} Aislamiento, modularidad, rendimiento mejorado y capacidad de prueba.
+                \item \textbf{Cuándo usarla:} Cuando se necesitan varias capas reutilizables o cuando la lógica de negocio 
+                se expone a través de interfaces de servicio.
+            \end{itemize}
+        \subsubsection{Arquitectura N-Niveles (N-Tier)}
+            \begin{itemize}
+                \item Similar a la arquitectura en capas, pero con la separación de las capas en niveles físicos (servidores).
+                \item \textbf{Beneficios:} Escalabilidad, mantenibilidad y disponibilidad, ya que cada nivel es independiente 
+                y puede redundarse.
+            \end{itemize}
+    \subsection{Casos de Uso}
+    Los casos de uso describen acciones que los usuarios o sistemas externos realizan en el software. 
+    Son representaciones de la funcionalidad pública de la aplicación.
+
+    \subsection{Reglas de Negocio}
+    Las reglas de negocio definen el comportamiento del sistema. Separar las reglas de negocio del 
+    resto de la aplicación facilita su evolución y asegura que los cambios en el sistema no afecten a otras partes.
+
+    \textbf{Importancia:} Las reglas de negocio son el núcleo de la arquitectura, alrededor del cual se construyen las otras capas.
+
+    \subsection{Testing y Mantenimiento}
+    Separar las reglas de negocio de la implementación facilita el mantenimiento y hace que la arquitectura sea "testable". 
+    Esta independencia también permite cambiar frameworks, bases de datos o bibliotecas sin alterar las reglas de negocio.
+
+    \subsection{Patrones de Diseño}
+
+    \begin{itemize}
+        \item La programación en capas organiza los objetos en tres capas principales: presentación, lógica de negocio y datos.
+        \item \textbf{Capa de Presentación:} Interactúa con el usuario, mostrando y capturando datos.
+        \item \textbf{Capa de Lógica de Negocio:} Contiene las reglas de negocio y procesa los datos.
+        \item \textbf{Capa de Datos:} Gestiona la interacción con bases de datos y otros sistemas externos.
+    \end{itemize}
+
+    \subsection{Ventajas y Desvantajas}
+    \begin{itemize}
+        \item \textbf{Ventajas:} Modularidad, facilidad de mantenimiento y escalabilidad.
+        \item \textbf{Desventajas:} La sobrecarga de capas puede reducir la eficiencia si no se balancea adecuadamente.
+    \end{itemize}
+
+    \subsection{Ejemplo de Arquitectura en Capas}
+
+    \begin{itemize}
+        \item N-Capas
+        \item Modelo-Vista-Controlador (MVC)
+    \end{itemize}
+
+
 \end{center}

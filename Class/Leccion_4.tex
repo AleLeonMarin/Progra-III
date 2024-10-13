@@ -1,3 +1,138 @@
 \begin{center}
-    \section{Web Service}
+	\section{Web Service}
+
+	Un servicio web es una tecnología que utiliza protocolos y estándares para intercambiar datos
+	entre aplicaciones desarrolladas en diferentes lenguajes de programación y plataformas, promoviendo la interoperabilidad.
+
+	\subsection{SOAP}
+	\begin{itemize}
+		\item SOAP es un protocolo que utiliza XML para el intercambio de información.
+		      Define cómo los servicios web se comunican independientemente de la plataforma o el lenguaje.
+		\item SOAP permite la comunicación entre empresas y clientes mediante el uso de HTTP y XML para las solicitudes y respuestas.
+		\item WSDL (Web Service Definition Language) se utiliza para describir los servicios disponibles en SOAP y cómo usarlos.
+	\end{itemize}
+
+	\subsection{REST}
+	\begin{itemize}
+		\item REST es un estilo de arquitectura que usa HTTP para el intercambio de información, simplificando las interacciones entre cliente y servidor.
+		\item n REST, las URIs identifican los recursos y los verbos HTTP (GET, POST, PUT, DELETE) determinan las operaciones a realizar.
+	\end{itemize}
+
+	SOAP es más estructurado y permite un mayor control sobre la seguridad y transacciones, mientras que REST es más ligero y eficiente para aplicaciones web.
+
+	\subsection{JSON}
+	JSON (JavaScript Object Notation) es un formato de texto ligero para almacenar e intercambiar datos. Es fácil de leer
+	y escribir para los humanos y simple para las máquinas de procesar.
+
+	\subsubsection{Caracteristicas}
+	\begin{itemize}
+		\item JSON usa comillas dobles para las claves y los valores, y su formato es similar a los objetos de JavaScript.
+		\item Es más liviano y rápido de procesar que XML, lo que lo convierte en una alternativa popular para la transmisión de datos.
+	\end{itemize}
+
+	\subsubsection{Tipos de valores}
+	\begin{itemize}
+		\item Números: enteros o decimales.
+		\item String: Una secuencia de caracteres Unicode.
+		\item Booleanos: true o false.
+		\item Arreglos: Una colección ordenada de valores.
+		\item Objetos: Un conjunto de pares clave-valor..
+		\item Nulo: valor nulo.
+	\end{itemize}
+
+	\subsubsection{Ventajas}
+	Es fácil de entender, rápido y más ligero que XML, además de ser nativamente soportado por JavaScript.
+
+	\subsection{HTTP}
+
+	HTTP (Hypertext Transfer Protocol) es un protocolo de comunicación utilizado en
+	la web para transferir datos entre un cliente (generalmente un navegador web) y un servidor.
+
+	\subsubsection{Funcionamiento}
+
+	HTTP funciona mediante el intercambio de mensajes: el cliente envía solicitudes (requests) y el servidor
+	devuelve respuestas (responses). Las solicitudes utilizan métodos (verbos) como GET, POST, PUT, DELETE, etc.
+
+	\subsubsection{Versiones}
+	\begin{itemize}
+		\item HTTP/1.1: Introdujo el uso de verbos como GET y POST.
+		\item HTTP/2: Mejora el rendimiento mediante la compresión de cabeceras y el uso de una única conexión para múltiples solicitudes.
+		\item HTTP/3: Introduce el uso de QUIC (un protocolo basado en UDP) para mejorar la velocidad y confiabilidad.
+	\end{itemize}
+
+	\subsubsection{Codigos de respuesta}
+	\begin{itemize}
+		\item 1xx: Respuestas informativas.
+		      \begin{itemize}
+			      \item 100: Continuar.
+			      \item 101: Cambio de protocolo.
+			      \item 102: Procesando.
+		      \end{itemize}
+		\item 2xx: Respuestas satisfactorias.
+		      \begin{itemize}
+			      \item 200: OK.
+			      \item 201: Creado.
+			      \item 202: Aceptado.
+			      \item 203: Información no autoritativa.
+			      \item 204: Sin contenido.
+			      \item 205: Restablecer contenido.
+			      \item 206: Contenido parcial.
+		      \end{itemize}
+		\item 3xx: Redirecciones.
+		      \begin{itemize}
+			      \item 300: Múltiples opciones.
+			      \item 301: Movido permanentemente.
+			      \item 302: Encontrado.
+		      \end{itemize}
+		\item 4xx: Errores del cliente.
+		      \begin{itemize}
+			      \item 400: Solicitud incorrecta.
+			      \item 401: No autorizado.
+			      \item 402: Pago requerido.
+			      \item 403: Prohibido.
+			      \item 404: No encontrado.
+			      \item 405: Método no permitido.
+			      \item 406: No aceptable.
+			      \item 408: Tiempo de espera de solicitud.
+		      \end{itemize}
+		\item 5xx: Errores del servidor.
+		\begin{itemize}
+            \item 500: Error interno del servidor.
+            \item 501: No implementado.
+            \item 502: Puerta de enlace incorrecta.
+            \item 503: Servicio no disponible.
+            \item 504: Tiempo de espera de puerta de enlace.
+            \item 505: Versión HTTP no compatible.
+        \end{itemize}
+	\end{itemize}
+
+    \subsubsection{Cabeceras}
+    Las cabeceras (headers) son metadatos que se envían junto con las solicitudes y respuestas HTTP.
+    \subsubsection{Parametros}
+    Se pueden agregar dos tipos de parámetros de PATH y de QUERY, la principal
+    diferencia es que los de PATH son obligatorios ya forman parte del URL en si,
+    mientras que los de QUERY son opcionales.
+
+    \subsection{JWT}
+    Un JWT es un estándar para transmitir de manera segura información entre dos partes como un usuario y 
+    un servidor. Contiene un conjunto de "claims" que son declaraciones sobre el usuario.
+    \subsubsection{Estructura}
+    Un JWT consta de tres partes separadas por puntos:
+
+    \begin{itemize}
+        \item Header: Contiene el tipo de token y el algoritmo de encriptación.
+        \item Payload: Incluye los datos o claims, como la identidad del usuario.
+        \item Signature: La firma se genera usando el header, payload y una clave secreta, 
+        y se utiliza para verificar la autenticidad del token.
+    \end{itemize}
+
+    \subsubsection{Firma JWT}
+        La firma asegura que el token no haya sido alterado. Si alguien modifica el token, la firma no coincidirá y se podrá rechazar.
+    \subsubsection{Algortimos de encriptación}
+    \begin{itemize}
+        \item HS256: Utiliza una clave secreta compartida entre el emisor y el receptor.
+        \item RS256: Utiliza un par de claves pública y privada para la firma y validación.
+    \end{itemize}
+
+
 \end{center}
